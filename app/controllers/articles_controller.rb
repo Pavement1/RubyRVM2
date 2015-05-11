@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
 	
 	def create
 		render plain: params[:article].inspect
+		redirect_to @article
 	end
 end
 
