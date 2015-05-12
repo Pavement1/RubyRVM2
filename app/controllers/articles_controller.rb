@@ -16,7 +16,7 @@ class ArticlesController < ApplicationController
 	end
 	
 	def edit
-		@article = Article.new(article_params)
+		@article = Article.new#(article_params)
 	
 	
 	def create
