@@ -16,7 +16,12 @@ class ArticlesController < ApplicationController
 	end
 	
 	def edit
-		@article = Article.new#(article_params)
+		@article = Article.find(params[:id])
+		if @article.update(article_params)
+		else
+			render 'edit'
+		end
+	end
 	
 	
 	def create
